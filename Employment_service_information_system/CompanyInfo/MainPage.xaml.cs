@@ -36,7 +36,7 @@ namespace CompanyInfo
 		void timer_Tick(object sender, EventArgs e)
 		{
 
-			TextProperty1 = DateTime.Now.ToString();
+			//TextProperty1 = DateTime.Now.ToString();
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e)

@@ -27,7 +27,12 @@ namespace CompanyInfo.Units
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			NavigationService.GetNavigationService(this).Navigate(new Uri("/Units/Recruitmen_Info_Management.xaml", UriKind.Relative));
+			//NavigationService.GetNavigationService(this).Navigate(new Uri("/Units/Recruitmen_Info_Management.xaml", UriKind.Relative));
+		}
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			Enterprise_Name.IsEnabled = true;
 		}
 	}
 }
