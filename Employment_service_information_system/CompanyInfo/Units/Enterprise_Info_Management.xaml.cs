@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace CompanyInfo.Units
 {
     /// <summary>
-    /// Page2.xaml 的交互逻辑
+    /// Page1.xaml 的交互逻辑
     /// </summary>
-    public partial class Page2 : Page
+    public partial class Enterprise_Info_Management : Page
     {
-        public Page2()
-        {
-            InitializeComponent();
-        }
-    }
+		public Enterprise_Info_Management()
+		{
+			InitializeComponent();
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.GetNavigationService(this).Navigate(new Uri("/Units/Recruitmen_Info_Management.xaml", UriKind.Relative));
+		}
+	}
 }

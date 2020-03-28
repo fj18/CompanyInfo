@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CompanyInfo
+namespace CompanyInfo.Units
 {
     /// <summary>
-    /// Page1.xaml 的交互逻辑
+    /// Page4.xaml 的交互逻辑
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Students_Info_View : Page
     {
-        public Page1()
+        public Students_Info_View()
         {
             InitializeComponent();
-            //test
         }
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			Button btn = e.Source as Button;
-			string s1 = btn.Tag.ToString();
-			frm.Source = new Uri(s1, UriKind.Relative);
-
-		}
-	}
+    }
 }
