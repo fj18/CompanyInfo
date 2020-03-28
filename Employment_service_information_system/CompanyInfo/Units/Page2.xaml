@@ -9,6 +9,6 @@
       Title="Page2">
 
     <Grid>
-        
+        <Label FontSize="50">招聘信息管理</Label>
     </Grid>
 </Page>

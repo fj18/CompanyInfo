@@ -9,6 +9,6 @@
       Title="Page3">
 
     <Grid>
-        
+        <Label FontSize="50">投递记录管理</Label>
     </Grid>
 </Page>

@@ -9,6 +9,6 @@
       Title="Page4">
 
     <Grid>
-        
+        <Label FontSize="50">求职信息查看</Label>
     </Grid>
 </Page>
