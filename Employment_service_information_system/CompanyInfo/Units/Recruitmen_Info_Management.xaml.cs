@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CompanyInfo.Units
 {
     /// <summary>
-    /// Page1.xaml 的交互逻辑
+    /// Page2.xaml 的交互逻辑
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Recruitmen_Info_Management : Page
     {
-        public Page1()
+        public Recruitmen_Info_Management()
         {
             InitializeComponent();
         }

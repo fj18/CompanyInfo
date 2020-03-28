@@ -1,4 +1,4 @@
-﻿<Page x:Class="CompanyInfo.Page1"
+﻿<Page x:Class="CompanyInfo.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -13,10 +13,10 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Margin="20">
-            <Button Tag="/Units/page1.xaml" Click="Button_Click">企业信息管理</Button>
-            <Button Tag="/Units/page2.xaml" Click="Button_Click">招聘信息管理</Button>
-            <Button Tag="/Units/page3.xaml" Click="Button_Click">投递记录管理</Button>
-            <Button Tag="/Units/page4.xaml" Click="Button_Click">求职信息查看</Button>
+            <Button Tag="/Units/Enterprise_Info_Management.xaml" Click="Button_Click">企业信息管理</Button>
+            <Button Tag="/Units/Recruitmen_Info_Management.xaml" Click="Button_Click">招聘信息管理</Button>
+            <Button Tag="/Units/Records_Management.xaml" Click="Button_Click">投递记录管理</Button>
+            <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click">求职信息查看</Button>
         </StackPanel>
         <Frame x:Name="frm" Grid.Column="1"></Frame>
     </Grid>

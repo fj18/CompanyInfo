@@ -60,19 +60,19 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Compile Include="Units\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="Units\Enterprise_Info_Management.xaml.cs">
+      <DependentUpon>Enterprise_Info_Management.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Units\Page2.xaml.cs">
-      <DependentUpon>Page2.xaml</DependentUpon>
+    <Compile Include="Units\Recruitmen_Info_Management.xaml.cs">
+      <DependentUpon>Recruitmen_Info_Management.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Units\Page3.xaml.cs">
-      <DependentUpon>Page3.xaml</DependentUpon>
+    <Compile Include="Units\Records_Management.xaml.cs">
+      <DependentUpon>Records_Management.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Units\Page4.xaml.cs">
-      <DependentUpon>Page4.xaml</DependentUpon>
+    <Compile Include="Units\Students_Info_View.xaml.cs">
+      <DependentUpon>Students_Info_View.xaml</DependentUpon>
     </Compile>
-    <Page Include="Page1.xaml">
+    <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -80,23 +80,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Units\Page1.xaml">
+    <Page Include="Units\Enterprise_Info_Management.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Units\Page2.xaml">
+    <Page Include="Units\Recruitmen_Info_Management.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Units\Page3.xaml">
+    <Page Include="Units\Records_Management.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Units\Page4.xaml">
+    <Page Include="Units\Students_Info_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
