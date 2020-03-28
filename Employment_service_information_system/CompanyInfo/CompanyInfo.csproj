@@ -126,6 +126,9 @@
     </None>
     <None Include="Properties\app.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <PropertyGroup>
     <StartArguments />
   </PropertyGroup>
