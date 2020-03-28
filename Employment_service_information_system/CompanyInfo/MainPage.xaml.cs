@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -20,13 +21,22 @@ namespace CompanyInfo
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+		private DispatcherTimer timer;
+		public MainPage()
         {
-            InitializeComponent();
+			InitializeComponent();
 
-			
-			
+			timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromSeconds(1);
+			timer.Tick += new EventHandler(timer_Tick);
+			timer.Start();
 			//test
+		}
+
+		void timer_Tick(object sender, EventArgs e)
+		{
+
+			TextProperty1 = DateTime.Now.ToString();
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e)

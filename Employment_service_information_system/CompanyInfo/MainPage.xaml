@@ -12,20 +12,46 @@
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel  Background="Gray">
+        <DockPanel Grid.Column="0" Background="Gray">
+        <StackPanel DockPanel.Dock="Top">
             <Border BorderThickness="2" BorderBrush="AliceBlue" Width="60" Height="60" >
                 <Button Background="AliceBlue">
                 <Image Name="imageHead" VerticalAlignment="Top" Stretch="UniformToFill"></Image>
                 </Button>
             </Border>
             <Label Content="企业名称："/>
-            <TextBlock x:Name="companyName"></TextBlock>
-      
-            <Button Tag="/Units/Enterprise_Info_Management.xaml" Click="Button_Click">企业信息管理</Button>
-            <Button Tag="/Units/Recruitmen_Info_Management.xaml" Click="Button_Click">招聘信息管理</Button>
-            <Button Tag="/Units/Records_Management.xaml" Click="Button_Click">投递记录管理</Button>
-            <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click">求职信息查看</Button>
-        </StackPanel>
+            <TextBlock x:Name="companyName" Height="22"></TextBlock>
+
+                <Button Tag="/Units/Enterprise_Info_Management.xaml" Click="Button_Click" Margin="0,5">
+                    <WrapPanel >
+                        <Image Height="10" Width="10" Source="/images/1.jpg"/>
+                        <TextBlock TextWrapping="Wrap" Text="企业信息管理"  VerticalAlignment="Center" />
+                    </WrapPanel>
+                </Button>
+                <Button Tag="/Units/Recruitmen_Info_Management.xaml" Click="Button_Click" Margin="0,5">
+                    <WrapPanel >
+                        <Image Height="10" Width="10" Source="/images/2.jpg"/>
+                        <TextBlock TextWrapping="Wrap" Text="招聘信息管理"  VerticalAlignment="Center" />
+                    </WrapPanel>
+                </Button>
+                <Button Tag="/Units/Records_Management.xaml" Click="Button_Click" Margin="0,5"> 
+                    <WrapPanel >
+                        <Image Height="10" Width="10" Source="/images/3.jpg"/>
+                        <TextBlock TextWrapping="Wrap" Text="投递信息管理"  VerticalAlignment="Center" />
+                    </WrapPanel>
+                </Button>
+                <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click" Margin="0,5">
+                    <WrapPanel >
+                        <Image Height="10" Width="10" Source="/images/4.jpg"/>
+                        <TextBlock TextWrapping="Wrap" Text="求职信息管理"  VerticalAlignment="Center" />
+                    </WrapPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel  Background="Gray" Height="50" DockPanel.Dock="Bottom" Margin="0,10,0,0">
+                <Label>Time:</Label>
+                <TextBox Background="Gray" TextWrapping="Wrap"  VerticalAlignment="Bottom" x:Name="tb1" Text="{Binding TextProperty1, UpdateSourceTrigger=PropertyChanged}" BorderBrush="#FF66686F" Foreground="#FF9F52AE"/>
+            </StackPanel>
+        </DockPanel>
         <Frame x:Name="frm" Grid.Column="1"></Frame>
     </Grid>
 </Page>
