@@ -23,6 +23,7 @@ namespace CompanyInfo
         public Page1()
         {
             InitializeComponent();
+            //test
         }
     }
 }
