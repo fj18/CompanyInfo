@@ -5,9 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CompanyInfo"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="300" d:DesignWidth="500"
       Title="Page1">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="20">
+            <Button Tag="/Units/page1.xaml" Click="Button_Click">企业信息管理</Button>
+            <Button Tag="/Units/page2.xaml" Click="Button_Click">招聘信息管理</Button>
+            <Button Tag="/Units/page3.xaml" Click="Button_Click">投递记录管理</Button>
+            <Button Tag="/Units/page4.xaml" Click="Button_Click">求职信息查看</Button>
+        </StackPanel>
+        <Frame x:Name="frm" Grid.Column="1"></Frame>
     </Grid>
 </Page>
