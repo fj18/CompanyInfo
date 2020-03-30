@@ -9,6 +9,44 @@
       Title="Page2">
 
     <Grid>
-        <Label FontSize="50">招聘信息管理</Label>
+        <GroupBox Header="企业招聘信息管理" FontSize="30" Margin="5" Height="100" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                
+                <Label FontSize="20" VerticalAlignment="Center">招聘岗位：</Label>
+                <TextBox x:Name="start" Width="90" Margin="5,13"/>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">查询</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">新增</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">删除</Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="招聘信息" FontSize="25" VerticalAlignment="Bottom" Height="312">
+            <ScrollViewer>
+                
+                    <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="选择" Width="80">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <CheckBox x:Name="DeleteThis"></CheckBox>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="职位名称" />
+                            <DataGridComboBoxColumn Header="公司名称" />
+                            <DataGridCheckBoxColumn Header="工作地址" />
+                            <DataGridHyperlinkColumn Header="招聘人数" />
+                            <DataGridHyperlinkColumn Header="联系地址" />
+                            <DataGridHyperlinkColumn Header="联系电话" />
+                            <DataGridHyperlinkColumn Header="创建时间" />
+                            <DataGridHyperlinkColumn Header="编辑" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                
+            </ScrollViewer>
+        </GroupBox>
+        
+        
     </Grid>
 </Page>

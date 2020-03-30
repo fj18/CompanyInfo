@@ -37,7 +37,7 @@
                 <Button Tag="/Units/Records_Management.xaml" Click="Button_Click" Margin="0,5"> 
                     <WrapPanel >
                         <Image Height="10" Width="10" Source="/images/3.jpg"/>
-                        <TextBlock TextWrapping="Wrap" Text="投递信息管理"  VerticalAlignment="Center" />
+                        <TextBlock TextWrapping="Wrap" Text="投递记录管理"  VerticalAlignment="Center" />
                     </WrapPanel>
                 </Button>
                 <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click" Margin="0,5">
