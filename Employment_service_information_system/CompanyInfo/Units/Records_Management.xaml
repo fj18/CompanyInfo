@@ -9,6 +9,37 @@
       Title="Page3">
 
     <Grid>
-        <Label FontSize="50">投递记录管理</Label>
+        <GroupBox Header="投递信息管理" FontSize="30" Margin="5" Height="100" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+
+                <Label FontSize="20" VerticalAlignment="Center">姓名：</Label>
+                <TextBox x:Name="start" Width="90" Margin="5,13"/>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">查询</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">删除</Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="投递信息" FontSize="25" VerticalAlignment="Bottom" Height="312">
+            <ScrollViewer>
+                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="选择" Width="80">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <CheckBox x:Name="DeleteThis"></CheckBox>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="职位名称" />
+                        <DataGridComboBoxColumn Header="公司名称" />
+                        <DataGridCheckBoxColumn Header="姓名" />
+                        <DataGridHyperlinkColumn Header="简历详细" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </ScrollViewer>
+        </GroupBox>
+
     </Grid>
 </Page>
