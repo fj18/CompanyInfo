@@ -63,11 +63,17 @@
     <Compile Include="Units\Enterprise_Info_Management.xaml.cs">
       <DependentUpon>Enterprise_Info_Management.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Units\PasswdMod.xaml.cs">
+      <DependentUpon>PasswdMod.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Units\Recruitmen_Info_Management.xaml.cs">
       <DependentUpon>Recruitmen_Info_Management.xaml</DependentUpon>
     </Compile>
     <Compile Include="Units\Records_Management.xaml.cs">
       <DependentUpon>Records_Management.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Units\Students_info_detail.xaml.cs">
+      <DependentUpon>Students_info_detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Units\Students_Info_View.xaml.cs">
       <DependentUpon>Students_Info_View.xaml</DependentUpon>
@@ -88,11 +94,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Units\PasswdMod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Units\Recruitmen_Info_Management.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Units\Records_Management.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Units\Students_info_detail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
