@@ -9,11 +9,15 @@
       Title="Page1">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DockPanel Grid.Column="0" Background="Gray">
-        <StackPanel DockPanel.Dock="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="Gray" DockPanel.Dock="Top" Grid.Row="0">
             <Border BorderThickness="2" BorderBrush="AliceBlue" Width="60" Height="60" >
                 <Button Background="AliceBlue">
                 <Image Name="imageHead" VerticalAlignment="Top" Stretch="UniformToFill"></Image>
@@ -21,37 +25,39 @@
             </Border>
             <Label Content="企业名称："/>
             <TextBlock x:Name="companyName" Height="22"></TextBlock>
-
-                <Button Tag="/Units/Enterprise_Info_Management.xaml" Click="Button_Click" Margin="0,5">
+            </StackPanel>
+        <StackPanel Background="Gray" Grid.Row="1">
+                <Button Tag="/Units/Enterprise_Info_Management.xaml" Click="Button_Click" Margin="0,10">
                     <WrapPanel >
                         <Image Height="10" Width="10" Source="/images/1.jpg"/>
                         <TextBlock TextWrapping="Wrap" Text="企业信息管理"  VerticalAlignment="Center" />
                     </WrapPanel>
                 </Button>
-                <Button Tag="/Units/Recruitmen_Info_Management.xaml" Click="Button_Click" Margin="0,5">
+                <Button Tag="/Units/Recruitmen_Info_Management.xaml" Click="Button_Click" Margin="0,10">
                     <WrapPanel >
                         <Image Height="10" Width="10" Source="/images/2.jpg"/>
                         <TextBlock TextWrapping="Wrap" Text="招聘信息管理"  VerticalAlignment="Center" />
                     </WrapPanel>
                 </Button>
-                <Button Tag="/Units/Records_Management.xaml" Click="Button_Click" Margin="0,5"> 
+                <Button Tag="/Units/Records_Management.xaml" Click="Button_Click" Margin="0,10"> 
                     <WrapPanel >
                         <Image Height="10" Width="10" Source="/images/3.jpg"/>
                         <TextBlock TextWrapping="Wrap" Text="投递记录管理"  VerticalAlignment="Center" />
                     </WrapPanel>
                 </Button>
-                <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click" Margin="0,5">
+                <Button Tag="/Units/Students_Info_View.xaml" Click="Button_Click" Margin="0,10">
                     <WrapPanel >
                         <Image Height="10" Width="10" Source="/images/4.jpg"/>
                         <TextBlock TextWrapping="Wrap" Text="求职信息管理"  VerticalAlignment="Center" />
                     </WrapPanel>
                 </Button>
+                    
             </StackPanel>
-            <StackPanel  Background="Gray" Height="50" DockPanel.Dock="Bottom" Margin="0,10,0,0">
+            <StackPanel  Grid.Row="2" Background="Gray" Height="auto" >
                 <Label>Time:</Label>
                 <TextBox Background="Gray" TextWrapping="Wrap"  VerticalAlignment="Bottom" x:Name="tb1" Text="{Binding TextProperty1, UpdateSourceTrigger=PropertyChanged}" BorderBrush="#FF66686F" Foreground="#FF9F52AE"/>
             </StackPanel>
-        </DockPanel>
-        <Frame x:Name="frm" Grid.Column="1"></Frame>
+        
+        <Frame x:Name="frm" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"></Frame>
     </Grid>
 </Page>

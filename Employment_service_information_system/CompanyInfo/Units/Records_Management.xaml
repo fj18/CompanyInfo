@@ -9,18 +9,22 @@
       Title="Page3">
 
     <Grid>
-        <GroupBox Header="投递信息管理" FontSize="30" Margin="5" Height="100" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Header="投递信息管理" FontSize="30" Margin="5" Height="auto" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
 
                 <Label FontSize="20" VerticalAlignment="Center">姓名：</Label>
                 <TextBox x:Name="start" Width="90" Margin="5,13"/>
-                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">查询</Button>
-                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">删除</Button>
+                <Button FontSize="22" Width="140" Margin="20,0">查询</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" >删除</Button>
             </StackPanel>
         </GroupBox>
-        <GroupBox Header="投递信息" FontSize="25" VerticalAlignment="Bottom" Height="312">
+        <GroupBox Grid.Row="1" Header="投递信息" FontSize="25" VerticalAlignment="Top" Height="auto">
             <ScrollViewer>
-                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False">
+                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged" CanUserReorderColumns="False" CanUserResizeColumns="False">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="选择" Width="80">
                             <DataGridTemplateColumn.CellTemplate>
