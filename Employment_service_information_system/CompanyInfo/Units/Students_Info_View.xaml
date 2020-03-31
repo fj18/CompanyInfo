@@ -9,6 +9,21 @@
       Title="Page4">
 
     <Grid>
-        <Label FontSize="50">求职信息查看</Label>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Label FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" >关键字：</Label>
+            <TextBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"></TextBox>
+            <Button Content="查询" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="30 0 0 0 "></Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" CanUserAddRows="False" RowBackground="White" IsReadOnly="True" AlternatingRowBackground="#FFF3FDFC" AutoGenerateColumns="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="标题" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="发布时间" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="详细信息" Binding="{Binding }"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
