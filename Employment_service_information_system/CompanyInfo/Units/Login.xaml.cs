@@ -24,5 +24,10 @@ namespace CompanyInfo.Units
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GetNavigationService(this).Navigate(new Uri("../MainPage.xaml", UriKind.Relative));
+        }
     }
 }

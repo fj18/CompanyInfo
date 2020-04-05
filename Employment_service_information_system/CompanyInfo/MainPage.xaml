@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:CompanyInfo"
       mc:Ignorable="d" 
       d:DesignHeight="376.177" d:DesignWidth="690.711"
-      Title="Page1">
+      Title="主页" WindowHeight="900" WindowWidth="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
