@@ -20,9 +20,42 @@ namespace CompanyInfo.Units
     /// </summary>
     public partial class Students_info_detail : Page
     {
-        public Students_info_detail()
+        private int ID { get; set; }
+        public Students_info_detail(WantedJob wantedJob)
         {
+            ID = wantedJob.ID;
             InitializeComponent();
+            tbCity.Text = wantedJob.City;
+            tbDetail.Text = wantedJob.Remark;
+            tbIndustry.Text = wantedJob.Industry;
+            tbPosition.Text = wantedJob.PositionType;
+            tbSalary.Text = wantedJob.Salary;
+            tbTitle.Text = wantedJob.Title;
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            Students_Info_View students_Info_View = new Students_Info_View();
+            NavigationService.GetNavigationService(this).Navigate(students_Info_View);
+        } 
+
+        private void Admission_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new JobManageEntities())
+            {
+                bool isGetJob = false;
+                var q = from t in context.Resume
+                        where t.ID == ID
+                        select t;
+                foreach (var v in q)
+                {
+                    v.qstation = "已就业";
+                    isGetJob = true;
+                }
+                context.SaveChanges();
+                if (isGetJob == true)
+                    MessageBox.Show("录取成功");
+            }
         }
     }
 }

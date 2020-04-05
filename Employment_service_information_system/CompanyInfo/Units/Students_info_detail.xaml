@@ -24,26 +24,26 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="标题：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbTitle" Grid.Row="0" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="1" Grid.Column="0" Content="期望工作城市：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbCity" Grid.Row="1" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="2" Grid.Column="0" Content="从事行业：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbIndustry" Grid.Row="2" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="3" Grid.Column="0" Content="期望职位：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbPosition" Grid.Row="3" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="4" Grid.Column="0" Content="薪资要求：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="4" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbSalary" Grid.Row="4" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="5" Grid.Column="0" Content="详细说明：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="5" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tbDetail" Grid.Row="5" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="录取" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
-            <Button Content="返回" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0"></Button>
+            <Button x:Name="admission" Content="录取" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Admission_Click"></Button>
+            <Button x:Name="back" Content="返回" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0" Click="Back_Click"></Button>
         </StackPanel>
     </Grid>
 </Page>
