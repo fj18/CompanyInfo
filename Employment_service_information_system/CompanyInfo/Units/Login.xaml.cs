@@ -28,27 +28,33 @@ namespace CompanyInfo.Units
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             string inputAccount = t1.Text.ToString();
             using(var context = new JobManageEntities())
             {
+                bool isAccountright = false;
                 var q = from t in context.Company
                         where t.Account == inputAccount
                         select t;
+
+                
                 foreach(var v in q)
                 {
-                    if (v.Account == null)
+                    
+                    isAccountright = true;
+                    if (v.Account == inputAccount && v.Password == p1.Password)
                     {
-                        MessageBox.Show("用户不存在");
-                    }
-                    else if (v.Password == p1.Password)
-                    {
-
                         MainPage mainPage = new MainPage(inputAccount);
                         NavigationService.GetNavigationService(this).Navigate(mainPage);
                     }
+                    else
+                    {
+                        MessageBox.Show("密码输入错误");
+                    }
 
                 }
-                
+                if(isAccountright == false)
+                MessageBox.Show("用户不存在");
             }
 
         }
