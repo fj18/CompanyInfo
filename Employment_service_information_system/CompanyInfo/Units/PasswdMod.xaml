@@ -25,17 +25,17 @@
         <TextBlock Grid.Column="1" Text="Default" FontSize="30" VerticalAlignment="Center" Margin="30 0 0 0"></TextBlock>
         
         <Label Grid.Row="1" Grid.Column="0" Content="原始密码:" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <PasswordBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
+        <PasswordBox x:Name="oldPasswd" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
        
         <Label Grid.Row="2" Grid.Column="0" Content="新密码:" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <PasswordBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
+        <PasswordBox x:Name="newPasswd1" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
 
         <Label Grid.Row="3" Grid.Column="0" Content="确认密码:" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <PasswordBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
+        <PasswordBox x:Name="newPasswd2" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Height="30" Margin="30 0 0 0"></PasswordBox>
 
         <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
-            <Button Content="保存" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
-            <Button Content="重置" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0"></Button>
+            <Button Content="保存" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"  ></Button>
+            <Button Content="重置" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0" Click="Button_Click_1" ></Button>
         </StackPanel>
     </Grid>
 </Page>

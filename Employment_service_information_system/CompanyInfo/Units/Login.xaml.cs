@@ -44,7 +44,7 @@ namespace CompanyInfo.Units
                     isAccountright = true;
                     if (v.Account == inputAccount && v.Password == p1.Password)
                     {
-                        MainPage mainPage = new MainPage(inputAccount);
+                        MainPage mainPage = new MainPage(v.ID,v.Name);
                         NavigationService.GetNavigationService(this).Navigate(mainPage);
                     }
                     else

@@ -21,13 +21,14 @@ namespace CompanyInfo
     /// </summary>
     public partial class MainPage : Page
     {
-        public  static string CompanyID { get; set; }
+        public  static int CompanyID { get; set; }
 		private DispatcherTimer ShowTimer;
-		public MainPage(string companyID)
+		public MainPage(int companyID,string Name)
         {
 			InitializeComponent();
 
             CompanyID = companyID;
+            companyName.Text = Name;
 			ShowTime();    //在这里窗体加载的时候不执行文本框赋值，窗体上不会及时的把时间显示出来，而是等待了片刻才显示了出来
 
 			ShowTimer = new System.Windows.Threading.DispatcherTimer();
