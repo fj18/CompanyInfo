@@ -55,8 +55,9 @@
             </StackPanel>
             <StackPanel  Grid.Row="2" Background="Gray" Height="auto" >
                 <Label>Time:</Label>
-                <TextBox Background="Gray" TextWrapping="Wrap"  VerticalAlignment="Bottom" x:Name="tb1" Text="{Binding TextProperty1, UpdateSourceTrigger=PropertyChanged}" BorderBrush="#FF66686F" Foreground="#FF9F52AE"/>
-            </StackPanel>
+                <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb1" BorderBrush="Orange" Foreground="#FF9F52AE"/>
+                <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb2" BorderBrush="Orange" Foreground="#FF9F52AE"/>
+        </StackPanel>
         
         <Frame x:Name="frm" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"></Frame>
     </Grid>

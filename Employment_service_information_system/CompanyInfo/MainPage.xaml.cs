@@ -21,29 +21,47 @@ namespace CompanyInfo
     /// </summary>
     public partial class MainPage : Page
     {
-		private DispatcherTimer timer;
+		private DispatcherTimer ShowTimer;
 		public MainPage()
         {
 			InitializeComponent();
 
-			timer = new DispatcherTimer();
-			timer.Interval = TimeSpan.FromSeconds(1);
-			timer.Tick += new EventHandler(timer_Tick);
-			timer.Start();
-			//test
+			ShowTime();    //在这里窗体加载的时候不执行文本框赋值，窗体上不会及时的把时间显示出来，而是等待了片刻才显示了出来
+
+			ShowTimer = new System.Windows.Threading.DispatcherTimer();
+
+			ShowTimer.Tick += new EventHandler(ShowCurTimer);//起个Timer一直获取当前时间
+
+			ShowTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
+
+			ShowTimer.Start();
 		}
 
-		void timer_Tick(object sender, EventArgs e)
+		public void ShowCurTimer(object sender, EventArgs e)
+
 		{
 
-			//TextProperty1 = DateTime.Now.ToString();
+			ShowTime();
+
 		}
+
+		//ShowTime方法
+
+		private void ShowTime()
+		{
+			//获得年月日
+			this.tb1.Text = DateTime.Now.ToString("yyyy/MM/dd");   //yyyy/MM/dd
+																		  
+			this.tb2.Text = DateTime.Now.ToString("HH:mm:ss");//获得时分秒
+		}
+
+
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			Button btn = e.Source as Button;
 			string s1 = btn.Tag.ToString();
-			frm.Source = new Uri(s1, UriKind.Relative);
+			frm.Source = new Uri(s1, UriKind.Relative);  //button按钮  显示界面
 
 		}
 	}
