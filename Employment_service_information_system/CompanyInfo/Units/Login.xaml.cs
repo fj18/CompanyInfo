@@ -16,26 +16,13 @@ using System.Windows.Shapes;
 namespace CompanyInfo.Units
 {
     /// <summary>
-    /// Page1.xaml 的交互逻辑
+    /// Login.xaml 的交互逻辑
     /// </summary>
-    public partial class Enterprise_Info_Management : Page
+    public partial class Login : Page
     {
-        private Company company = new Company();
-		public Enterprise_Info_Management()
-		{
-			InitializeComponent();
-          
-
+        public Login()
+        {
+            InitializeComponent();
         }
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			
-		}
-
-		private void Button_Click_1(object sender, RoutedEventArgs e)
-		{
-			enterprise_Name.IsEnabled = true;
-		}
-	}
+    }
 }

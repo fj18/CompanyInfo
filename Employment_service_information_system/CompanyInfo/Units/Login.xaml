@@ -1,0 +1,50 @@
+﻿<Page x:Class="CompanyInfo.Units.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CompanyInfo.Units"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="400"
+      Title="Login">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Background" Value="Gray"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Margin" Value="80 0 0 0"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="300*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  VerticalAlignment="Center" Width="450">
+            <TextBlock Opacity="0.9" FontSize="25" HorizontalAlignment="Center" Foreground="Purple">欢迎登录学籍管理系统</TextBlock>
+            <Separator></Separator>
+        </StackPanel>
+        <Label Opacity="0.8" Background="AliceBlue" Grid.Row="1" Grid.Column="0" Content="学 号：" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Opacity="0.8" Background="AliceBlue" Grid.Row="2" Grid.Column="0" Content="密 码：" FontSize="20" VerticalAlignment="Center"  HorizontalAlignment="Right"></Label>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <TextBox  Opacity="0.8" x:Name="t1" VerticalContentAlignment="Center" Width="200" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="10 0 0 0" ></TextBox>
+            <Label x:Name="usernameMsg" Foreground="Red" VerticalAlignment="Center"></Label>
+        </StackPanel>
+        <PasswordBox  Opacity="0.8" x:Name="p1" Grid.Row="2" VerticalContentAlignment="Center" Grid.Column="1" Width="200" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="10 0 0 0"></PasswordBox>
+        <Separator  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" ></Separator>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button  Tag="1" Opacity="0.8" Content="登录"   Margin="60,15,0,15" IsDefault="True"/>
+            <Button  Tag="2" Opacity="0.8" Content="取消" Margin="80,15,0,15" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Page>

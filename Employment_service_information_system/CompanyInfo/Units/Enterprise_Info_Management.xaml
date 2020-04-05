@@ -26,16 +26,16 @@
 
 
         <Label Grid.Column="0" FontSize="30" Content="公司名称：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Name"  Grid.Column="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="enterprise_Name"  Grid.Column="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="1" FontSize="30" Content="公司性质：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Properties"  Grid.Column="1" Grid.Row="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="enterprise_Properties"  Grid.Column="1" Grid.Row="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="2" FontSize="30" Content="公司规模：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Size"  Grid.Column="1" Grid.Row="2" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="enterprise_Size"  Grid.Column="1" Grid.Row="2" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="3" FontSize="30" Content="公司行业：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Sector"  Grid.Column="1" Grid.Row="3" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="enterprise_Sector"  Grid.Column="1" Grid.Row="3" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="4" FontSize="30" Content="详细介绍：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox Grid.Column="1" Grid.Row="4" FontSize="24" Text="Default" IsEnabled="True" ></TextBox>
