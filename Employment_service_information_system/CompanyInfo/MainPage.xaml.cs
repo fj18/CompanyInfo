@@ -35,7 +35,9 @@ namespace CompanyInfo
 			ShowTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
 
 			ShowTimer.Start();
-		}
+
+           
+        }
 
 		public void ShowCurTimer(object sender, EventArgs e)
 
@@ -64,5 +66,13 @@ namespace CompanyInfo
 			frm.Source = new Uri(s1, UriKind.Relative);  //button按钮  显示界面
 
 		}
-	}
+
+        private void LnkPre_Click(object sender, RoutedEventArgs e)
+        {
+            //修改密码导航
+            
+            frm.Source = new Uri("Units/PasswdMod.xaml", UriKind.Relative);
+
+        }
+    }
 }
