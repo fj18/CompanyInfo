@@ -24,7 +24,7 @@ namespace CompanyInfo.Units
 		public Enterprise_Info_Management()
 		{
 			InitializeComponent();
-          
+            enterprise_Name.Text = MainPage.CompanyID;
 
         }
 
