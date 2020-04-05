@@ -17,7 +17,7 @@
             <StackPanel Orientation="Horizontal">
 
                 <Label FontSize="20" VerticalAlignment="Center">姓名：</Label>
-                <TextBox x:Name="start" Width="90" Margin="5,13"/>
+                <TextBox x:Name="start" Width="90" Margin="5,13" Text="sunuo"/>
                 <Button FontSize="22" Width="140" Margin="20,0">查询</Button>
                 <Button FontSize="22" Width="140" Margin="20,0" >删除</Button>
             </StackPanel>

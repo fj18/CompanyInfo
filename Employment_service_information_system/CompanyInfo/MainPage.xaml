@@ -13,8 +13,8 @@
             <ColumnDefinition Width="6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Background="Gray" DockPanel.Dock="Top" Grid.Row="0">
@@ -55,8 +55,8 @@
         </StackPanel>
         <StackPanel  Grid.Row="2" Background="Gray" Height="auto" >
             <Label>Time:</Label>
-            <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb1" BorderBrush="Orange" Foreground="#FF9F52AE"/>
-            <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb2" BorderBrush="Orange" Foreground="#FF9F52AE"/>
+            <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb1" BorderBrush="Orange" Foreground="Black"/>
+            <TextBox Background="Gray"   VerticalAlignment="Bottom" x:Name="tb2" BorderBrush="Orange" Foreground="Black"/>
             
             <TextBlock FontSize="15" TextWrapping="Wrap" Margin="0,0,0,0">
 
