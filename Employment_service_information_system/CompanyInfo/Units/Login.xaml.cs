@@ -29,5 +29,10 @@ namespace CompanyInfo.Units
         {
             NavigationService.GetNavigationService(this).Navigate(new Uri("../MainPage.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("敬请期待");
+        }
     }
 }
