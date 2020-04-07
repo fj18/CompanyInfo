@@ -16,7 +16,7 @@
         <GroupBox Header="企业招聘信息管理" FontSize="30" Margin="5" Height="auto" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" >
                 <Label FontSize="20" VerticalAlignment="Center">招聘岗位：</Label>
-                <TextBox x:Name="start" Width="90" Margin="5,13" Text="sunuo"/>
+                <TextBox x:Name="start" Width="90" Margin="5,13" />
                 <Button FontSize="22" Width="140" Margin="20,0" >查询</Button>
                 <Button FontSize="22" Width="140" Margin="20,0" >新增</Button>
                 <Button FontSize="22" Width="140" Margin="20,0" >删除</Button>
@@ -27,24 +27,24 @@
                 
                     <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False">
                         <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="选择" Width="80">
+                        <DataGridCheckBoxColumn Header="选择"></DataGridCheckBoxColumn>
+                        <DataGridTextColumn Header="职位名称" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="公司名称" Binding="{Binding Company}"/>
+                        <DataGridTextColumn Header="工作地址" />
+                        <DataGridTextColumn Header="招聘人数" />
+                        <DataGridTextColumn Header="联系地址" />
+                        <DataGridTextColumn Header="联系电话" />
+                        <DataGridTextColumn Header="创建时间" />
+                        <DataGridTemplateColumn Header="编辑" Width="80">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <CheckBox x:Name="DeleteThis"></CheckBox>
+                                        <Button x:Name="detail" Content="编辑" Margin="3,3,3,3" ></Button>
                                     </StackPanel>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="职位名称" />
-                            <DataGridComboBoxColumn Header="公司名称" />
-                            <DataGridCheckBoxColumn Header="工作地址" />
-                            <DataGridHyperlinkColumn Header="招聘人数" />
-                            <DataGridHyperlinkColumn Header="联系地址" />
-                            <DataGridHyperlinkColumn Header="联系电话" />
-                            <DataGridHyperlinkColumn Header="创建时间" />
-                            <DataGridHyperlinkColumn Header="编辑" />
-                        </DataGrid.Columns>
+                    </DataGrid.Columns>
                     </DataGrid>
                 
             </ScrollViewer>

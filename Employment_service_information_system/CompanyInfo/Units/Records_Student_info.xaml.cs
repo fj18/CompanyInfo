@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CompanyInfo.Units
 {
     /// <summary>
-    /// Records_init.xaml 的交互逻辑
+    /// Records_Student_info.xaml 的交互逻辑
     /// </summary>
-    public partial class Records_init : Page
+    public partial class Records_Student_info : Page
     {
-        public Records_init()
+        public Records_Student_info()
         {
             InitializeComponent();
         }

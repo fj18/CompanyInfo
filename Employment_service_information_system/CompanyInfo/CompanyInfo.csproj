@@ -111,8 +111,8 @@
     <Compile Include="Units\PasswdMod.xaml.cs">
       <DependentUpon>PasswdMod.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Units\Records_init.xaml.cs">
-      <DependentUpon>Records_init.xaml</DependentUpon>
+    <Compile Include="Units\Records_Student_info.xaml.cs">
+      <DependentUpon>Records_Student_info.xaml</DependentUpon>
     </Compile>
     <Compile Include="Units\Recruitmen_Info_Management.xaml.cs">
       <DependentUpon>Recruitmen_Info_Management.xaml</DependentUpon>
@@ -120,8 +120,8 @@
     <Compile Include="Units\Records_Management.xaml.cs">
       <DependentUpon>Records_Management.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Units\Recruitmen_Student_info.xaml.cs">
-      <DependentUpon>Recruitmen_Student_info.xaml</DependentUpon>
+    <Compile Include="Units\Recruitmen_Init.xaml.cs">
+      <DependentUpon>Recruitmen_Init.xaml</DependentUpon>
     </Compile>
     <Compile Include="Units\Students_info_detail.xaml.cs">
       <DependentUpon>Students_info_detail.xaml</DependentUpon>
@@ -159,7 +159,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Units\Records_init.xaml">
+    <Page Include="Units\Records_Student_info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,7 +171,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Units\Recruitmen_Student_info.xaml">
+    <Page Include="Units\Recruitmen_Init.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,8 +234,8 @@
     </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

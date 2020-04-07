@@ -17,28 +17,28 @@
             <StackPanel Orientation="Horizontal">
 
                 <Label FontSize="20" VerticalAlignment="Center">姓名：</Label>
-                <TextBox x:Name="start" Width="90" Margin="5,13" Text="sunuo"/>
-                <Button FontSize="22" Width="140" Margin="20,0">查询</Button>
-                <Button FontSize="22" Width="140" Margin="20,0" >删除</Button>
+                <TextBox x:Name="Name" Width="90" Margin="5,13" />
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">查询</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click_1" >删除</Button>
             </StackPanel>
         </GroupBox>
         <GroupBox Grid.Row="1" Header="投递信息" FontSize="25" VerticalAlignment="Top" Height="auto">
             <ScrollViewer>
-                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged" CanUserReorderColumns="False" CanUserResizeColumns="False">
+                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="选择" Width="80">
+                        <DataGridCheckBoxColumn Header="选择" Width="80"></DataGridCheckBoxColumn>
+                        <DataGridTextColumn Header="职位名称" Binding="{Binding PositionName}" />
+                        <DataGridTextColumn Header="公司名称" Binding="{Binding CompanyName}"/>
+                        <DataGridTextColumn Header="姓名"  Binding="{Binding ResumeName}"/>
+                        <DataGridTemplateColumn Header="简历详情" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <CheckBox x:Name="DeleteThis"></CheckBox>
+                                        <Button x:Name="detail" Content="详情" Margin="3,3,3,3"  Click="detail_Click"></Button>
                                     </StackPanel>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="职位名称" />
-                        <DataGridComboBoxColumn Header="公司名称" />
-                        <DataGridCheckBoxColumn Header="姓名" />
-                        <DataGridHyperlinkColumn Header="简历详细" />
                     </DataGrid.Columns>
                 </DataGrid>
 
