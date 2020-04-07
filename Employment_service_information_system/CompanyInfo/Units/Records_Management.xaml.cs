@@ -24,30 +24,30 @@ namespace CompanyInfo.Units
     {
 
         JobManageEntities db = new JobManageEntities();
-        DataSet ds = new DataSet();
+        DataTable dt = new DataTable();
         public Records_Management()
         {
             InitializeComponent();
             SqlConnection conn = new SqlConnection("server=101.200.41.96; database=JobManageEntities; uid=sa; pwd=Qq123456");
             string str = "select Company.id,Company.[Nmae],Position.id,Position.[Name],Position.CompanyId,Resume.id,Resume.[Name] from Company,Position,Resume join Record on Resume.id=Record.id,Position.id=Record.id,Company.id=Position.CompanyId";
             SqlDataAdapter da = new SqlDataAdapter(str, conn);
-            da.Fill(ds);
+            da.Fill(dt);
 
-            dataGrid.DataContext = ds;
+            dataGrid.DataContext = dt;
         }
 
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            var q = from t in ds.Tables
-                    where t.ResumeName.Contains(Name.Text.ToString())
-                    select t;
+            DataView dv = new DataView(dt);
 
-            dataGrid.ItemsSource = q.ToList();
+            dv.RowFilter ="%"+ Name.Text.Trim()+"%";
 
-           
+            dataGrid.DataContext = dv;
+
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
