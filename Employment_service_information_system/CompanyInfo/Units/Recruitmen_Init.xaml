@@ -27,23 +27,23 @@
 
 
         <Label Grid.Column="0" FontSize="30" Content="招聘职位：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Name"  Grid.Column="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="PositionName"  Grid.Column="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
-        <Label Grid.Column="0" Grid.Row="1" FontSize="30" Content="公作地点：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Properties"  Grid.Column="1" Grid.Row="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <Label Grid.Column="0" Grid.Row="1" FontSize="30" Content="工作地点：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox x:Name="Adress"  Grid.Column="1" Grid.Row="1" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="2" FontSize="30" Content="招聘人数：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Size"  Grid.Column="1" Grid.Row="2" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="Count"  Grid.Column="1" Grid.Row="2" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="3" FontSize="30" Content="联系电话：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="Enterprise_Sector"  Grid.Column="1" Grid.Row="3" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
+        <TextBox x:Name="ContratPhone"  Grid.Column="1" Grid.Row="3" Width="500" Height="40" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="True" Text="Default"></TextBox>
 
         <Label Grid.Column="0" Grid.Row="4" FontSize="30" Content="详细介绍：" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Column="1" Grid.Row="4" FontSize="24" Text="Default  sunuo" IsEnabled="True" ></TextBox>
+        <TextBox x:Name="Remark" Grid.Column="1" Grid.Row="4" FontSize="24" Text="Default  sunuo" IsEnabled="True" ></TextBox>
 
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="保存" FontSize="30"></Button>
-            <Button Content="取消" FontSize="30" Margin="100 0 0 0"></Button>
+            <Button Content="保存" FontSize="30" Click="Button_Click"></Button>
+            <Button Content="取消" FontSize="30" Margin="100 0 0 0" Click="Button_Click_1"></Button>
         </StackPanel>
 
 

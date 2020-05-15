@@ -31,7 +31,10 @@ namespace CompanyInfo
         public virtual DbSet<Position> Position { get; set; }
         public virtual DbSet<Record> Record { get; set; }
         public virtual DbSet<Resume> Resume { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserInfo> UserInfo { get; set; }
         public virtual DbSet<WantedJob> WantedJob { get; set; }
+        public virtual DbSet<Dataview_1> Dataview_1 { get; set; }
+        public virtual DbSet<Dateview_2> Dateview_2 { get; set; }
     }
 }

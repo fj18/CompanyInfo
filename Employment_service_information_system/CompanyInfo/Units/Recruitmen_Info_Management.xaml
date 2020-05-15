@@ -16,40 +16,44 @@
         <GroupBox Header="企业招聘信息管理" FontSize="30" Margin="5" Height="auto" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" >
                 <Label FontSize="20" VerticalAlignment="Center">招聘岗位：</Label>
-                <TextBox x:Name="start" Width="90" Margin="5,13" />
-                <Button FontSize="22" Width="140" Margin="20,0" >查询</Button>
-                <Button FontSize="22" Width="140" Margin="20,0" >新增</Button>
-                <Button FontSize="22" Width="140" Margin="20,0" >删除</Button>
+                <TextBox x:Name="txt" Width="90" Margin="5,13" />
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click"  >查询</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click_1">新增</Button>
+                <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click_2">删除</Button>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="招聘信息" Grid.Row="1" FontSize="25" VerticalAlignment="Top" Height="auto">
             <ScrollViewer>
-                
-                    <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False">
-                        <DataGrid.Columns>
-                        <DataGridCheckBoxColumn Header="选择"></DataGridCheckBoxColumn>
-                        <DataGridTextColumn Header="职位名称" Binding="{Binding Name}" />
-                        <DataGridTextColumn Header="公司名称" Binding="{Binding Company}"/>
-                        <DataGridTextColumn Header="工作地址" />
-                        <DataGridTextColumn Header="招聘人数" />
-                        <DataGridTextColumn Header="联系地址" />
-                        <DataGridTextColumn Header="联系电话" />
-                        <DataGridTextColumn Header="创建时间" />
+
+                <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Header="选择" x:Name="DeleteThis" Binding="{Binding Path=IsSelected}" IsReadOnly="False">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style  TargetType="CheckBox" />
+                            </DataGridCheckBoxColumn.ElementStyle>
+                        </DataGridCheckBoxColumn>
+                        <DataGridTextColumn Header="职位名称" Binding="{Binding PositionName}" />
+                        <DataGridTextColumn Header="公司名称" Binding="{Binding CompanyName}"/>
+                        <DataGridTextColumn Header="工作地址" Binding="{Binding Address}"/>
+                        <DataGridTextColumn Header="招聘人数" Binding="{Binding Count}"/>
+                        <DataGridTextColumn Header="联系地址" Binding="{Binding ContractAddress}" />
+                        <DataGridTextColumn Header="联系电话" Binding="{Binding ContractPhone}"/>
+                        <DataGridTextColumn Header="创建时间" Binding="{Binding CreateTime}"/>
                         <DataGridTemplateColumn Header="编辑" Width="80">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <Button x:Name="detail" Content="编辑" Margin="3,3,3,3" ></Button>
+                                        <Button x:Name="detail" Content="编辑" Margin="3,3,3,3" Click="detail_Click"></Button>
                                     </StackPanel>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                     </DataGrid.Columns>
-                    </DataGrid>
-                
+                </DataGrid>
+
             </ScrollViewer>
         </GroupBox>
-        
-        
+
+
     </Grid>
 </Page>

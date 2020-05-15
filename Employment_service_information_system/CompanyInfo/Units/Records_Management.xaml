@@ -17,7 +17,7 @@
             <StackPanel Orientation="Horizontal">
 
                 <Label FontSize="20" VerticalAlignment="Center">姓名：</Label>
-                <TextBox x:Name="Name" Width="90" Margin="5,13" />
+                <TextBox x:Name="txt" Width="90" Margin="5,13" />
                 <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click">查询</Button>
                 <Button FontSize="22" Width="140" Margin="20,0" Click="Button_Click_1" >删除</Button>
             </StackPanel>
@@ -26,10 +26,15 @@
             <ScrollViewer>
                 <DataGrid x:Name="dataGrid" Height="auto" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False">
                     <DataGrid.Columns>
-                        <DataGridCheckBoxColumn Header="选择" Width="80"></DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn Header="选择" Width="80" x:Name="DeleteThis" Binding="{Binding Path=IsSelected}" IsReadOnly="False">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style  TargetType="CheckBox" />
+                            </DataGridCheckBoxColumn.ElementStyle>
+                        </DataGridCheckBoxColumn>
                         <DataGridTextColumn Header="职位名称" Binding="{Binding PositionName}" />
                         <DataGridTextColumn Header="公司名称" Binding="{Binding CompanyName}"/>
                         <DataGridTextColumn Header="姓名"  Binding="{Binding ResumeName}"/>
+                        <DataGridTextColumn Header="简历"  Binding="{Binding Remark}"/>
                         <DataGridTemplateColumn Header="简历详情" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -44,6 +49,7 @@
 
             </ScrollViewer>
         </GroupBox>
+
 
     </Grid>
 </Page>

@@ -26,32 +26,32 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="姓名：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="sunuo" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="name" Grid.Row="0" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="1" Grid.Column="0" Content="性别：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="sex" Grid.Row="1" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="2" Grid.Column="0" Content="出生日期：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="birdathy" Grid.Row="2" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="3" Grid.Column="0" Content="学历：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="degree" Grid.Row="3" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="4" Grid.Column="0" Content="专业：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="4" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="major" Grid.Row="4" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="5" Grid.Column="0" Content="居住地址：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="5" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="adress" Grid.Row="5" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="6" Grid.Column="0" Content="求职意见：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="6" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="intersion" Grid.Row="6" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <Label Grid.Row="7" Grid.Column="0" Content="简介：" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-        <TextBlock Grid.Row="7" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="remark" Grid.Row="7" Grid.Column="1" Text="Default" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
 
         <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="录取" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
-            <Button Content="返回" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0"></Button>
+            <Button Content="录取" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" ></Button>
+            <Button Content="返回" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0" Click="Button_Click_1"></Button>
         </StackPanel>
     </Grid>
 </Page>
